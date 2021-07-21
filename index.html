@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>naokinishijima</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="bg-slider">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="globalMenuSp">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="biography/index.html">Biography</a></li>
+                <li><a href="collections/index.html">Collections</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div class="global_nav">
+                <nav class="global_pc">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="biography/index.html">Biography</a></li>
+                        <li><a href="collections/index.html">Collections</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="fv">
+            <div class="logo"><img src="img/namelogo2.svg" alt="ロゴ"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script>
+        $(function () {
+            $('.hamburger').click(function () {
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $('.globalMenuSp').addClass('active');
+                } else {
+                    $('.globalMenuSp').removeClass('active');
+                }
+            });
+        });
+
+        $(".bg-slider").backstretch([
+            "img/kyoto.JPG"
+            , "img/london.JPG"
+            , "img/charch.jpeg"
+            , "img/kiss.jpeg"
+            , "img/shadow.JPG"
+            , "img/saint.jpeg"
+        ], { duration: 3000, fade: 750 });
+    </script>
+</body>
+
+</html>
